@@ -7,13 +7,13 @@ import { arrayMoveImmutable } from 'array-move';
 import images from './utils/images';
 import Images from './components/Images';
 
-const SortableItem = SortableElement(({ value,index }) => <Images index={index} value={value} />);
+const SortableItem = SortableElement(({ value, i }) => <Images i={i} value={value} />);
 
 const SortableList = SortableContainer(({ items }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-5 gap-5 my-10">
       {items?.map((value, index) => (
-        <SortableItem key={`item-${index}`} index={index} value={value} />
+        <SortableItem key={`item-${index}`} index={index} i={index} value={value} />
       ))}
     </div>
   );
@@ -21,8 +21,6 @@ const SortableList = SortableContainer(({ items }) => {
 
 const App = () => {
   const [items, setItems] = useState(images);
-
-  // console.log(items);
 
   const onSortEnd = ({ oldIndex, newIndex }) => {
     setItems(arrayMoveImmutable(items, oldIndex, newIndex));

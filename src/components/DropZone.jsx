@@ -14,7 +14,7 @@ const DropZone = ({ files, setFiles }) => {
         }
     });
 
-    const thumbs = files.map(file => (
+    const thumbs = files?.map(file => (
         <div key={file.name}>
             <div>
                 <img
@@ -26,8 +26,6 @@ const DropZone = ({ files, setFiles }) => {
         </div>
     ));
 
-    console.log(files);
-
     return (
         <>
             <div className='py-10 px-5 ' {...getRootProps()}>
@@ -37,7 +35,7 @@ const DropZone = ({ files, setFiles }) => {
                     <span className='text-center'>Add Images</span>
                 </p>
             </div>
-            <aside>{thumbs}</aside>
+            {/* <aside>{thumbs}</aside> */}
         </>
     );
 };

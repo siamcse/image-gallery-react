@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Images = ({ image, index }) => {
-    const { img, id } = image;
-    
+const Images = ({ value, index }) => {
+    const { img, id } = value;
+    console.log(index);
+
     return (
-        <div className={` ${index === 0 ? 'col-span-2 row-span-2' : 'col-span-1'} border-2 rounded-2xl`}>
+        <div className={` ${index === 0 ? 'sm:col-span-2 sm:row-span-2' : 'col-span-1'} border-2 rounded-2xl`}>
             <img
                 src={img}
                 alt={`Image-${id}`}

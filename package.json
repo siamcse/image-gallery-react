@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "array-move": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-dropzone": "^14.2.3"
+    "react-dropzone": "^14.2.3",
+    "react-sortable-hoc": "^2.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

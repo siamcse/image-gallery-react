@@ -11,6 +11,11 @@ const App = () => {
 
 
   console.log(items);
+  const handleDelete = () => {
+    console.log(selectedImages);
+    setItems(items.filter(item => !selectedImages.includes(item.id)));
+    setSelectedImages([]);
+  }
 
   useEffect(() => {
     let imgData;
@@ -30,7 +35,10 @@ const App = () => {
 
   return (
     <div className='container mx-auto px-4'>
-      <Navbar selectedImages={selectedImages} />
+      <Navbar
+        selectedImages={selectedImages}
+        handleDelete={handleDelete}
+      />
       <hr className='border-2' />
       <SortableList
         files={files}

@@ -1,17 +1,17 @@
 import React from 'react';
 
-const Navbar = ({ selectedImages }) => {
-    console.log(selectedImages.length);
+const Navbar = ({ selectedImages, handleDelete }) => {
+    const len = selectedImages.length;
     return (
         <div>
             {
-                selectedImages.length > 0 ?
+                len > 0 ?
                     <div className='flex justify-between items-center gap-4 py-5'>
-                        <div className='flex items-center gap-4 text-xl font-bold'>
+                        <div className='flex items-center gap-4 text-xl font-semibold'>
                             <input type="checkbox" checked={true} disabled />
-                            <p>{selectedImages.length} Selected Images</p>
+                            <p>{len} {len > 1 ? 'Files' : 'File'} Selected</p>
                         </div>
-                        <button className=''>Delete</button>
+                        <button onClick={()=>handleDelete()} className='text-red-700 font-semibold hover:underline'>Delete {len > 1 ? 'files' : 'file'}</button>
                     </div>
                     :
                     <>

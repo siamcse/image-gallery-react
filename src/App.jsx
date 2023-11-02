@@ -6,7 +6,9 @@ import SortableList from './components/ImageSortable';
 
 const App = () => {
   const [items, setItems] = useState(images);
-  const [files, setFiles] = useState([]);
+  const [files, setFiles] = useState([]); //add images are added here
+  const [selectedImages, setSelectedImages] = useState([]); //all selected images added here
+
 
   console.log(items);
 
@@ -28,9 +30,17 @@ const App = () => {
 
   return (
     <div className='container mx-auto px-4'>
-      <Navbar />
+      <Navbar selectedImages={selectedImages} />
       <hr className='border-2' />
-      <SortableList files={files} setFiles={setFiles} items={items} onSortEnd={onSortEnd} axis={"xy"} />
+      <SortableList
+        files={files}
+        setFiles={setFiles}
+        items={items}
+        selectedImages={selectedImages}
+        setSelectedImages={setSelectedImages}
+        onSortEnd={onSortEnd}
+        axis={"xy"}
+      />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import DropZone from './DropZone';
 
-const SelectImage = ({ files, setFiles,onUpload }) => {
+const AddImage = ({ files, setFiles,onUpload }) => {
     const handleFileUpload = (e) => {
         const files = e.target.files;
         onUpload(files);
@@ -16,4 +16,4 @@ const SelectImage = ({ files, setFiles,onUpload }) => {
     );
 };
 
-export default SelectImage;
+export default AddImage;

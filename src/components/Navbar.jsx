@@ -6,8 +6,8 @@ const Navbar = ({ selectedImages, handleDelete }) => {
         <div>
             {
                 len > 0 ?
-                    <div className='flex justify-between items-center gap-4 py-5'>
-                        <div className='flex items-center gap-4 text-xl font-semibold'>
+                    <div className='flex sm:flex-row flex-col justify-between items-center gap-4 py-5'>
+                        <div className='flex items-center gap-4 sm:text-xl font-semibold'>
                             <input type="checkbox" checked={true} disabled />
                             <p>{len} {len > 1 ? 'Files' : 'File'} Selected</p>
                         </div>

@@ -26,7 +26,7 @@ const Images = ({ value, i, selectedImages, setSelectedImages }) => {
                     type="checkbox"
                     checked={selectedImages.includes(id)}
                     onChange={() => handleSelectImages(id)}
-                    className='relative outline-none appearance-none top-5 left-5 p-2'
+                    className='relative rounded top-5 left-5 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2'
                 />
             </div>
         </div>

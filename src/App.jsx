@@ -9,14 +9,13 @@ const App = () => {
   const [files, setFiles] = useState([]); //add images are added here
   const [selectedImages, setSelectedImages] = useState([]); //all selected images added here
 
-
-  console.log(items);
+  //delete multiple images from gallery
   const handleDelete = () => {
-    console.log(selectedImages);
     setItems(items.filter(item => !selectedImages.includes(item.id)));
     setSelectedImages([]);
   }
 
+  //added image set to items
   useEffect(() => {
     let imgData;
     console.log(files)
@@ -29,6 +28,7 @@ const App = () => {
     }
   }, [files])
 
+  //image sort by array-move
   const onSortEnd = ({ oldIndex, newIndex }) => {
     setItems(arrayMoveImmutable(items, oldIndex, newIndex));
   };

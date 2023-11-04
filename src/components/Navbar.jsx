@@ -8,7 +8,7 @@ const Navbar = ({ selectedImages, handleDelete }) => {
                 len > 0 ?
                     <div className='flex sm:flex-row flex-col justify-between items-center gap-4 py-5'>
                         <div className='flex items-center gap-4 sm:text-xl font-semibold'>
-                            <input type="checkbox" checked={true} disabled />
+                            <input className='rounded' type="checkbox" checked={true} disabled />
                             <p>{len} {len > 1 ? 'Files' : 'File'} Selected</p>
                         </div>
                         <button onClick={()=>handleDelete()} className='text-red-700 font-semibold hover:underline'>Delete {len > 1 ? 'files' : 'file'}</button>

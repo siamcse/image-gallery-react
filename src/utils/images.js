@@ -13,7 +13,7 @@ import image_11 from "../assets/images/image-11.jpeg";
 const images = [
     {
         id: 1,
-        img: image_1
+        img: image_11
     },
     {
         id: 2,
@@ -53,7 +53,7 @@ const images = [
     },
     {
         id: 11,
-        img: image_11
+        img: image_1
     },
 
 ]

@@ -13,9 +13,6 @@ const App = () => {
   const handleDelete = () => {
     setItems(items.filter(item => !selectedImages.includes(item.id)));
     setSelectedImages([]);
-  }
-
-  console.log(items);
 
   //added image set to items
   useEffect(() => {

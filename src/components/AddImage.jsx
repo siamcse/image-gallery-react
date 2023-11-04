@@ -5,10 +5,8 @@ const AddImage = ({ setFiles }) => {
     const handleFileUpload = (e) => {
         const file = e.target.files[0];
         if (file) {
-            console.log(file);
             const reader = new FileReader();
             reader.onloadend = () => {
-                console.log(reader.result);
                 setFiles(reader.result);
             }
             reader.readAsDataURL(file);

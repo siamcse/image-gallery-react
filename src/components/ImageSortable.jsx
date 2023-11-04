@@ -14,7 +14,7 @@ const SortableItem = SortableElement(({ value, i, selectedImages, setSelectedIma
 
 const SortableList = SortableContainer(({ items, setFiles, selectedImages, setSelectedImages }) => {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-5 gap-5 my-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 lg:grid-cols-5 gap-5 my-6">
             {items?.map((value, index) => (
                 <SortableItem
                     key={`item-${index}`}

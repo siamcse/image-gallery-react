@@ -13,7 +13,7 @@ const Images = ({ value, i, selectedImages, setSelectedImages }) => {
     }
 
     return (
-        <div className={`relative ${i === 0 ? 'sm:col-span-2 sm:row-span-2' : 'col-span-1 row-span-1'} border-2 rounded-2xl`}>
+        <div className={`relative ${i === 0 ? 'col-span-2 row-span-2' : 'col-span-1 row-span-1'} border-2 rounded-2xl`}>
             <img
                 src={img}
                 alt={`Image-${id}`}

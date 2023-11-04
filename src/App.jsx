@@ -6,7 +6,7 @@ import SortableList from './components/ImageSortable';
 
 const App = () => {
   const [items, setItems] = useState(images);
-  const [files, setFiles] = useState([]); //add images are added here
+  const [files, setFiles] = useState(null); //add images are added here
   const [selectedImages, setSelectedImages] = useState([]); //all selected images added here
 
   //delete multiple images from gallery
@@ -15,13 +15,14 @@ const App = () => {
     setSelectedImages([]);
   }
 
+  console.log(items);
+
   //added image set to items
   useEffect(() => {
     let imgData;
-    console.log(files)
-    if (files[0]?.preview) {
+    if (files) {
       imgData = {
-        img: files[0]?.preview,
+        img: files,
         id: items?.length + 1
       }
       setItems([...items, imgData]);
